@@ -1,0 +1,32 @@
+# Environnement Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Variables d'environnement (JAMAIS sur GitHub)
+.env
+.env.local
+
+# Index FAISS (lourd, se régénère)
+backend/rag_index/
+
+# Modèles (trop lourds pour GitHub)
+fine_tuning/models/
+fine_tuning/data/raw/
+*.gguf
+*.safetensors
+*.bin
+
+# Node
+frontend/node_modules/
+frontend/.next/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log

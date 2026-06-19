@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --fifa-blue: #003DA5;
+  --fifa-green: #007A4D;
+  --fifa-red: #C8102E;
+  --fifa-gold: #C9A84C;
+  --fifa-cream: #F5F0E8;
+  --fifa-dark: #0D1B2A;
+}
+
+body {
+  background-color: var(--fifa-cream);
+  color: #0D1B2A;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F5F0E8; }
+::-webkit-scrollbar-thumb { background: var(--fifa-blue); border-radius: 3px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes ribbon {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(100vw) skewX(-15deg); }
+}
+
+.float-animation { animation: float 4s ease-in-out infinite; }
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.glass-dark {
+  background: rgba(0, 61, 165, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 61, 165, 0.2);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #B8860B, #FFD700, #C9A84C, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, #003DA5, #0052CC);
+}
+
+.fifa-ribbon {
+  background: linear-gradient(
+    135deg,
+    #003DA5 0%,
+    #007A4D 33%,
+    #C8102E 66%,
+    #003DA5 100%
+  );
+}
